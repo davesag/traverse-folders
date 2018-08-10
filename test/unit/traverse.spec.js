@@ -13,7 +13,7 @@ describe('src/utils/traverse', () => {
   ]
 
   before(() => {
-    traverse('test/unit/fixtures/api', 'index.js', processor)
+    traverse('test/unit/fixtures/api', processor)
   })
 
   it('returned the expected files', () => {

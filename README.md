@@ -27,6 +27,8 @@ Add `traverse-folders` as a `dependency`:
 
 A common use of `traverse-folders` is to automatically load a nested hierarchy of functions into an `index.js` file.
 
+### Consolidating API route controllers
+
 For example, let's say you are writing an API server with the following folder hierarchy.
 
 ```
@@ -53,14 +55,13 @@ const pathSeparator = new RegExp(path.sep, 'g')
 
 const apis = {}
 const base = __dirname
-const ignore = path.basename(module.filename)
 
 const processor = file => {
   const name = file.slice(base.length + 1, -3).replace(pathSeparator, '_')
   apis[name] = require(file)
 }
 
-traverse(base, ignore, processor)
+traverse(base, processor)
 
 module.exports = apis
 ```
@@ -81,6 +82,8 @@ Then when `index.js` is first required it will load all the underlying code and 
 
 with each api correctly linked to the underlying function.
 
+### Making a mockAPI that stays in sync with your real API
+
 Now let's suppose, in your tests, you want to create a mock API that has the same function names, but instead of actually loading the functions, it associates each name with a `stub`
 
 In `test/utils/mockAPI.js` you could write
@@ -92,18 +95,14 @@ const traverse = require('traverse-folders')
 
 const pathSeparator = new RegExp(path.sep, 'g')
 
-const names = []
+const names = {}
 const apiPath = 'src/api'
 const processor = file => {
   const name = file.slice(apiPath.length + 1, -3).replace(pathSeparator, '_')
-  names.push(name)
+  names[name] = stub()
 }
-traverse(apiPath, 'index.js', processor)
 
-const mockApi = names.reduce((acc, elem) => {
-  acc[elem] = stub()
-  return acc
-}, {})
+traverse(apiPath, processor)
 
 module.exports = mockApi
 ```
@@ -111,6 +110,21 @@ module.exports = mockApi
 Now your mockAPI can be used in unit tests in place of the real API, without referencing the real API at all.  This can be important if your API controllers refer to Sequelize models that might trigger an unwanted database connection. (Unit tests must not depend on external services.)
 
 By customising the `processor` function you can use `traverse-folders` to auto-load Sequelize models, ExpressJS middleware, and all manner of other things.
+
+## Options
+
+By default `traverse` will ignore any `index.js` files and only process files ending in `'.js'`. To override this behaviour you can pass an `options` object as the final parameter.
+
+The defaults are:
+
+```
+{
+  ignore: 'index.js',
+  suffix: '.js'
+}
+```
+
+so `traverse(apiPath, processor, { suffix: '.model.js' })` will ensure that only files ending in `.model.js` get loaded.
 
 ## Contributing
 

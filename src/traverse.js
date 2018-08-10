@@ -1,13 +1,20 @@
 const fs = require('fs')
 const path = require('path')
 
-const { DOT, ERROR_BUSY, ERROR_NOT_DIR, JS } = require('./constants')
+const { ERROR_BUSY, ERROR_NOT_DIR } = require('./constants')
 
-const traverse = (base, ignore, processor) => {
+const DEFAULT_OPTIONS = {
+  ignore: 'index.js',
+  suffix: '.js'
+}
+
+const traverse = (base, processor, options = {}) => {
+  const { ignore, suffix } = { ...DEFAULT_OPTIONS, ...options }
+
   const isJsFile = file =>
-    !file.startsWith(DOT) &&
-    (typeof ignore === 'string' && !file.endsWith(ignore)) &&
-    file.slice(-3) === JS
+    !file.startsWith('.') &&
+    !file.endsWith(ignore) &&
+    file.slice(-1 * suffix.length) === suffix
 
   const traversePath = folder => {
     const findFile = file => {
