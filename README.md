@@ -95,7 +95,7 @@ const traverse = require('traverse-folders')
 
 const pathSeparator = new RegExp(path.sep, 'g')
 
-const names = {}
+const mockApi = {}
 const apiPath = 'src/api'
 const processor = file => {
   const name = file.slice(apiPath.length + 1, -3).replace(pathSeparator, '_')
