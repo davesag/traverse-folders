@@ -42,7 +42,7 @@ src/
       /deleteThings.js
       /getThing.js
       /listThings.js
-      /updateThings.js
+      /updateThing.js
 ```
 
 In `src/api/index.js` you could put the following:
