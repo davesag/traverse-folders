@@ -75,7 +75,7 @@ Then when `index.js` is first required it will load all the underlying code and 
   things_createThing,
   things_deleteThing,
   things_getThing,
-  things_getThings,
+  things_listThings,
   things_updateThing,
 }
 ```
@@ -107,9 +107,9 @@ traverse(apiPath, processor)
 module.exports = mockApi
 ```
 
-Now your mockAPI can be used in unit tests in place of the real API, without referencing the real API at all.  This can be important if your API controllers refer to Sequelize models that might trigger an unwanted database connection. (Unit tests must not depend on external services.)
+Now your mockAPI can be used in unit tests in place of the real API, without referencing the real API at all.  This can be important if your API controllers refer to `Sequelize` models that might trigger an unwanted database connection. (Unit tests must not depend on external services.)
 
-By customising the `processor` function you can use `traverse-folders` to auto-load Sequelize models, ExpressJS middleware, and all manner of other things.
+By customising the `processor` function you can use `traverse-folders` to auto-load `Sequelize` models, `ExpressJS` middleware, and all manner of other things.
 
 ## Options
 
