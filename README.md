@@ -1,5 +1,7 @@
 # traverse-folders
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/davesag/traverse-folders.svg)](https://greenkeeper.io/)
+
 Traverse nested folders and process each of the discovered files.
 
 ## Branches
