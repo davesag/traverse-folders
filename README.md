@@ -21,7 +21,9 @@ This library assumes:
 
 Add `traverse-folders` as a `dependency`:
 
-    npm i traverse-folders
+```
+npm i traverse-folders
+```
 
 ## Examples
 
