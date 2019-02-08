@@ -1,6 +1,6 @@
 {
   "name": "traverse-folders",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Traverse nested folders and process each of the discovered files.",
   "main": "src/index.js",
   "engines": {
