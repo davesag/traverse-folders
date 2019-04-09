@@ -6,10 +6,13 @@ Traverse nested folders and process each of the discovered files.
 
 ## Branches
 
+<!-- prettier-ignore -->
 | Branch | Status | Coverage | Notes |
 | ------ | ------ | -------- | - |
 | `develop` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/develop) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Work in progress |
 | `master` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/master) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Latest stable release |
+
+[![NPM](https://nodei.co/npm/traverse-folders.png)](https://nodei.co/npm/traverse-folders/)
 
 ## Prerequisites
 
@@ -109,7 +112,7 @@ traverse(apiPath, processor)
 module.exports = mockApi
 ```
 
-Now your mockAPI can be used in unit tests in place of the real API, without referencing the real API at all.  This can be important if your API controllers refer to `Sequelize` models that might trigger an unwanted database connection. (Unit tests must not depend on external services.)
+Now your mockAPI can be used in unit tests in place of the real API, without referencing the real API at all. This can be important if your API controllers refer to `Sequelize` models that might trigger an unwanted database connection. (Unit tests must not depend on external services.)
 
 By customising the `processor` function you can use `traverse-folders` to auto-load `Sequelize` models, `ExpressJS` middleware, and all manner of other things.
 
@@ -127,6 +130,23 @@ The defaults are:
 ```
 
 so `traverse(apiPath, processor, { suffix: '.model.js' })` will ensure that only files ending in `.model.js` get loaded.
+
+## Development
+
+### Prerequisites
+
+- [NodeJS](https://nodejs.org) — Version `8` or better.
+
+### Test it
+
+- `npm test` — runs the unit tests.
+- `npm run test:coverage` — runs the unit tests with coverage reporting.
+
+### Lint it
+
+```
+npm run lint
+```
 
 ## Contributing
 
