@@ -129,7 +129,13 @@ The defaults are:
 }
 ```
 
-so `traverse(apiPath, processor, { suffix: '.model.js' })` will ensure that only files ending in `.model.js` get loaded.
+So `traverse(apiPath, processor, { ignore: 'index.jxs', suffix: '.jsx' })` will ensure that only files ending in `.jsx` get loaded, but will ignore `'index.jsx'`.
+
+### Other `ignore` options
+
+- `ignore` can be a regular expression, so `traverse(apiPath, processor, { ignore: /-/ })` will ensure that only files ending in `.js` get loaded, but will ignore any files with a dash in their name.
+- `ignore` can be a function, so so `traverse(apiPath, processor, { ignore: file => file === 'index.js' })` will ensure that only files ending in `.js` get loaded, but will ignore `'index.js'`.
+- if `ignore` is not a string, regular expression, or function, it's ignored.
 
 ## Development
 
