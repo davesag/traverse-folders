@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 
 const { ERROR_BUSY, ERROR_NOT_DIR } = require('./constants')
+const makeFileFilter = require('./utils/makeFileFilter')
 
 const DEFAULT_OPTIONS = {
   ignore: 'index.js',
@@ -11,10 +12,7 @@ const DEFAULT_OPTIONS = {
 const traverse = (base, processor, options = {}) => {
   const { ignore, suffix } = { ...DEFAULT_OPTIONS, ...options }
 
-  const isJsFile = file =>
-    !file.startsWith('.') &&
-    !file.endsWith(ignore) &&
-    file.slice(-1 * suffix.length) === suffix
+  const isJsFile = makeFileFilter(ignore, suffix)
 
   const traversePath = folder => {
     const findFile = file => {
