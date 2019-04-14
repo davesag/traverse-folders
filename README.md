@@ -24,7 +24,7 @@ This library assumes:
 
 Add `traverse-folders` as a `dependency`:
 
-```
+```sh
 npm i traverse-folders
 ```
 
@@ -36,7 +36,7 @@ A common use of `traverse-folders` is to automatically load a nested hierarchy o
 
 For example, let's say you are writing an API server with the following folder hierarchy.
 
-```
+```sh
 src/
   api/
     index.js
@@ -52,7 +52,7 @@ src/
 
 In `src/api/index.js` you could put the following:
 
-```
+```js
 const path = require('path')
 const traverse = require('traverse-folders')
 
@@ -73,7 +73,7 @@ module.exports = apis
 
 Then when `index.js` is first required it will load all the underlying code and expose
 
-```
+```js
 {
   ping,
   version,
@@ -93,7 +93,7 @@ Now let's suppose, in your tests, you want to create a mock API that has the sam
 
 In `test/utils/mockAPI.js` you could write
 
-```
+```js
 const path = require('path')
 const { stub } = require('sinon')
 const traverse = require('traverse-folders')
@@ -122,7 +122,7 @@ By default `traverse` will ignore any `index.js` files and only process files en
 
 The defaults are:
 
-```
+```js
 {
   ignore: 'index.js',
   suffix: '.js'
@@ -135,7 +135,7 @@ so `traverse(apiPath, processor, { suffix: '.model.js' })` will ensure that only
 
 ### Prerequisites
 
-- [NodeJS](https://nodejs.org) — Version `8` or better.
+- [NodeJS](https://nodejs.org) — Version `8.10` or better.
 
 ### Test it
 
@@ -144,7 +144,7 @@ so `traverse(apiPath, processor, { suffix: '.model.js' })` will ensure that only
 
 ### Lint it
 
-```
+```sh
 npm run lint
 ```
 
