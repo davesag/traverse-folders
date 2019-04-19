@@ -1,4 +1,4 @@
-# traverse-folders
+<p align="left"><img src="logo/horizontal.png" alt="traverse-folders" height="80px"></p>
 
 Traverse nested folders and process each of the discovered files.
 
