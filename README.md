@@ -1,4 +1,4 @@
-<p align="left"><img src="logo/horizontal.png" alt="traverse-folders" height="80px"></p>
+![Horizontal Logo](logo/horizontal.png)
 
 Traverse nested folders and process each of the discovered files.
 
@@ -133,8 +133,8 @@ So `traverse(apiPath, processor, { ignore: 'index.jxs', suffix: '.jsx' })` will 
 
 ### Other `ignore` options
 
-- `ignore` can be a regular expression, so `traverse(apiPath, processor, { ignore: /-/ })` will ensure that only files ending in `.js` get loaded, but will ignore any files with a dash in their name.
-- `ignore` can be a function, so so `traverse(apiPath, processor, { ignore: file => file === 'index.js' })` will ensure that only files ending in `.js` get loaded, but will ignore `'index.js'`.
+- `ignore` can be a regular expression, so `traverse(apiPath, processor, { ignore: /-/ })` will ensure that only files ending in `.js` get loaded, and will ignore any files with a dash in their name.
+- `ignore` can also be a function, so `traverse(apiPath, processor, { ignore: file => file === 'index.js' })` will ensure that only files ending in `.js` get loaded, but will ignore `'index.js'`.
 - if `ignore` is not a string, regular expression, or function, it's ignored.
 
 ## Development
@@ -147,6 +147,7 @@ So `traverse(apiPath, processor, { ignore: 'index.jxs', suffix: '.jsx' })` will 
 
 - `npm test` — runs the unit tests.
 - `npm run test:coverage` — runs the unit tests with coverage reporting.
+- `npm run test:mutants` — runs the mutation tests.
 
 ### Lint it
 
@@ -157,3 +158,7 @@ npm run lint
 ## Contributing
 
 Please see the [contributing notes](CONTRIBUTING.md).
+
+## Thanks
+
+- Thanks to [`reallinfo`](https://github.com/reallinfo) for the logo.

@@ -9,7 +9,8 @@
   "files": [
     "/package*.json",
     "/CONTRIBUTING.md",
-    "/src"
+    "/src",
+    "/logo/horizontal.png"
   ],
   "scripts": {
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
