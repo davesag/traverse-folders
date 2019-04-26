@@ -146,7 +146,7 @@ So `traverse(apiPath, processor, { ignore: 'index.jxs', suffix: '.jsx' })` will 
 ### Test it
 
 - `npm test` — runs the unit tests.
-- `npm run test:coverage` — runs the unit tests with coverage reporting.
+- `npm run test:unit:cov` — runs the unit tests with coverage reporting.
 - `npm run test:mutants` — runs the mutation tests.
 
 ### Lint it
