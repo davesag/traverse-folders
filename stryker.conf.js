@@ -4,7 +4,7 @@ module.exports = function(config) {
     mutate: ['src/**/*.js'],
     mutator: 'javascript',
     packageManager: 'npm',
-    reporters: ['clear-text', 'progress'],
+    reporters: ['clear-text'],
     testRunner: 'mocha',
     mochaOptions: {
       spec: ['./test/unit/**/*.test.js'],
