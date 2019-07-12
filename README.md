@@ -2,16 +2,6 @@
 
 Traverse nested folders and process each of the discovered files.
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/davesag/traverse-folders.svg)](https://greenkeeper.io/)
-
-## Branches
-
-<!-- prettier-ignore -->
-| Branch | Status | Coverage | Notes |
-| ------ | ------ | -------- | - |
-| `develop` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/develop) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Work in progress |
-| `master` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/master) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Latest stable release |
-
 [![NPM](https://nodei.co/npm/traverse-folders.png)](https://nodei.co/npm/traverse-folders/)
 
 ## Prerequisites
@@ -138,6 +128,16 @@ So `traverse(apiPath, processor, { ignore: 'index.jxs', suffix: '.jsx' })` will 
 - if `ignore` is not a string, regular expression, or function, it's ignored.
 
 ## Development
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/davesag/traverse-folders.svg)](https://greenkeeper.io/)
+
+### Branches
+
+<!-- prettier-ignore -->
+| Branch | Status | Coverage | Notes |
+| ------ | ------ | -------- | - |
+| `develop` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/develop) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Work in progress |
+| `master` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/master) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Latest stable release |
 
 ### Prerequisites
 
