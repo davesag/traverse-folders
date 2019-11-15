@@ -1,16 +1,6 @@
-# traverse-folders
+![Horizontal Logo](logo/horizontal.png)
 
 Traverse nested folders and process each of the discovered files.
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/davesag/traverse-folders.svg)](https://greenkeeper.io/)
-
-## Branches
-
-<!-- prettier-ignore -->
-| Branch | Status | Coverage | Notes |
-| ------ | ------ | -------- | - |
-| `develop` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/develop) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Work in progress |
-| `master` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/master) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Latest stable release |
 
 [![NPM](https://nodei.co/npm/traverse-folders.png)](https://nodei.co/npm/traverse-folders/)
 
@@ -133,11 +123,21 @@ So `traverse(apiPath, processor, { ignore: 'index.jxs', suffix: '.jsx' })` will 
 
 ### Other `ignore` options
 
-- `ignore` can be a regular expression, so `traverse(apiPath, processor, { ignore: /-/ })` will ensure that only files ending in `.js` get loaded, but will ignore any files with a dash in their name.
-- `ignore` can be a function, so so `traverse(apiPath, processor, { ignore: file => file === 'index.js' })` will ensure that only files ending in `.js` get loaded, but will ignore `'index.js'`.
+- `ignore` can be a regular expression, so `traverse(apiPath, processor, { ignore: /-/ })` will ensure that only files ending in `.js` get loaded, and will ignore any files with a dash in their name.
+- `ignore` can also be a function, so `traverse(apiPath, processor, { ignore: file => file === 'index.js' })` will ensure that only files ending in `.js` get loaded, but will ignore `'index.js'`.
 - if `ignore` is not a string, regular expression, or function, it's ignored.
 
 ## Development
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/davesag/traverse-folders.svg)](https://greenkeeper.io/)
+
+### Branches
+
+<!-- prettier-ignore -->
+| Branch | Status | Coverage | Notes |
+| ------ | ------ | -------- | - |
+| `develop` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/develop) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Work in progress |
+| `master` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/master) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Latest stable release |
 
 ### Prerequisites
 
@@ -146,7 +146,8 @@ So `traverse(apiPath, processor, { ignore: 'index.jxs', suffix: '.jsx' })` will 
 ### Test it
 
 - `npm test` — runs the unit tests.
-- `npm run test:coverage` — runs the unit tests with coverage reporting.
+- `npm run test:unit:cov` — runs the unit tests with coverage reporting.
+- `npm run test:mutants` — runs the mutation tests.
 
 ### Lint it
 
@@ -157,3 +158,7 @@ npm run lint
 ## Contributing
 
 Please see the [contributing notes](CONTRIBUTING.md).
+
+## Thanks
+
+- Thanks to [`reallinfo`](https://github.com/reallinfo) for the logo.
