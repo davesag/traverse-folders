@@ -2,16 +2,26 @@
   "name": "traverse-folders",
   "version": "1.1.0",
   "description": "Traverse nested folders and process each of the discovered files.",
+  "author": "Dave Sag <davesag@gmail.com>",
+  "type": "commonjs",
+  "license": "MIT",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/davesag"
+  },
   "main": "src/index.js",
   "engines": {
     "node": ">= 8.10.0"
   },
   "files": [
-    "/package*.json",
-    "/CONTRIBUTING.md",
-    "/src",
-    "/logo/horizontal.png"
+    "CONTRIBUTING.md",
+    "src",
+    "logo/horizontal.png"
   ],
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
   "scripts": {
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint": "eslint .",
@@ -23,10 +33,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davesag/traverse-folders.git"
+    "url": "https://github.com/davesag/traverse-folders.git"
   },
-  "author": "Dave Sag <davesag@gmail.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/davesag/traverse-folders/issues"
   },
@@ -73,6 +81,11 @@
       "git add"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "nyc": {
     "check-coverage": true,
     "per-file": true,
@@ -92,10 +105,5 @@
     ],
     "all": true,
     "cache": true
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
