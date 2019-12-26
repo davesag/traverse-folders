@@ -1,6 +1,6 @@
 {
   "name": "traverse-folders",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Traverse nested folders and process each of the discovered files.",
   "author": "Dave Sag <davesag@gmail.com>",
   "type": "commonjs",
