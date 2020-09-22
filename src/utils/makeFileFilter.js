@@ -9,9 +9,7 @@ const makeFileFilter = (ignore, suffix) => {
       : () => false
 
   const isSuitable = file =>
-    !file.startsWith('.') &&
-    !ignoreFn(file) &&
-    file.slice(-1 * suffix.length) === suffix
+    !file.startsWith('.') && !ignoreFn(file) && file.slice(-1 * suffix.length) === suffix
 
   return isSuitable
 }
