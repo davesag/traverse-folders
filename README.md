@@ -139,7 +139,7 @@ So `traverse(apiPath, processor, { ignore: 'index.jxs', suffix: '.jsx' })` will 
 
 ### Prerequisites
 
-- [NodeJS](htps://nodejs.org), 15.0.1+ (I use [`nvm`](https://github.com/creationix/nvm) to manage Node versions — `brew install nvm`.) You must use npm version 7.0.8 or better.
+- [NodeJS](htps://nodejs.org), 15.1.0+ (I use [`nvm`](https://github.com/creationix/nvm) to manage Node versions — `brew install nvm`.) You must use npm version 7.0.8 or better.
 
 ### Test it
 
