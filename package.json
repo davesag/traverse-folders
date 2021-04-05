@@ -45,7 +45,7 @@
     "traverse"
   ],
   "devDependencies": {
-    "ajv": "^7.0.3",
+    "ajv": "^8.0.5",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "eslint": "^7.11.0",
