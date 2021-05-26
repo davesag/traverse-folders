@@ -135,7 +135,7 @@ So `traverse(apiPath, processor, { ignore: 'index.jxs', suffix: '.jsx' })` will 
 | Branch | Status | Coverage | Audit | Notes |
 | ------ | ------ | -------- | ----- | ----- |
 | `develop` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/develop) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | [![Vulnerabilities](https://snyk.io/test/github/davesag/traverse-folders/develop/badge.svg)](https://snyk.io/test/github/davesag/traverse-folders/develop) | Work in progress |
-| `master` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/master) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | [![Vulnerabilities](https://snyk.io/test/github/davesag/traverse-folders/master/badge.svg)](https://snyk.io/test/github/davesag/traverse-folders/master) | Latest stable release |
+| `main` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/main.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/main) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/main/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | [![Vulnerabilities](https://snyk.io/test/github/davesag/traverse-folders/main/badge.svg)](https://snyk.io/test/github/davesag/traverse-folders/main) | Latest stable release |
 
 ### Prerequisites
 
