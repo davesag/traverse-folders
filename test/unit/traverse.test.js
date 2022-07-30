@@ -8,10 +8,7 @@ describe('src/utils/traverse', () => {
     const processor = file => {
       files.push(file)
     }
-    const expected = [
-      'test/unit/fixtures/api/outer.js',
-      'test/unit/fixtures/api/test/inner.js'
-    ]
+    const expected = ['test/unit/fixtures/api/outer.js', 'test/unit/fixtures/api/test/inner.js']
 
     before(() => {
       traverse('test/unit/fixtures/api', processor)

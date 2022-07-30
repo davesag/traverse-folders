@@ -21,13 +21,9 @@ const traverse = (base, processor, options = {}) => {
         traversePath(folderOrFile)
       } catch (err) {
         /* istanbul ignore if */
-        if (
-          err.code !== ERROR_NOT_DIR &&
-          /* istanbul ignore next */ err.code !== ERROR_BUSY
-        )
+        if (err.code !== ERROR_NOT_DIR && /* istanbul ignore next */ err.code !== ERROR_BUSY)
           throw err
-        if (isJsFile(folderOrFile) && typeof processor === 'function')
-          processor(folderOrFile)
+        if (isJsFile(folderOrFile) && typeof processor === 'function') processor(folderOrFile)
       }
     }
 

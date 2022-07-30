@@ -129,25 +129,22 @@ So `traverse(apiPath, processor, { ignore: 'index.jxs', suffix: '.jsx' })` will 
 
 ## Development
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/davesag/traverse-folders.svg)](https://greenkeeper.io/)
-
 ### Branches
 
 <!-- prettier-ignore -->
-| Branch | Status | Coverage | Notes |
-| ------ | ------ | -------- | - |
-| `develop` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/develop) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Work in progress |
-| `master` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/master.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/master) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/master/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | Latest stable release |
+| Branch | Status | Coverage | Audit | Notes |
+| ------ | ------ | -------- | ----- | ----- |
+| `develop` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/develop.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/develop) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/develop/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | [![Vulnerabilities](https://snyk.io/test/github/davesag/traverse-folders/develop/badge.svg)](https://snyk.io/test/github/davesag/traverse-folders/develop) | Work in progress |
+| `main` | [![CircleCI](https://circleci.com/gh/davesag/traverse-folders/tree/main.svg?style=svg)](https://circleci.com/gh/davesag/traverse-folders/tree/main) | [![codecov](https://codecov.io/gh/davesag/traverse-folders/branch/main/graph/badge.svg)](https://codecov.io/gh/davesag/traverse-folders) | [![Vulnerabilities](https://snyk.io/test/github/davesag/traverse-folders/main/badge.svg)](https://snyk.io/test/github/davesag/traverse-folders/main) | Latest stable release |
 
 ### Prerequisites
 
-- [NodeJS](https://nodejs.org) — Version `8.10` or better.
+- [NodeJS](htps://nodejs.org), 15.1.0+ (I use [`nvm`](https://github.com/creationix/nvm) to manage Node versions — `brew install nvm`.) You must use npm version 7.0.8 or better.
 
 ### Test it
 
 - `npm test` — runs the unit tests.
 - `npm run test:unit:cov` — runs the unit tests with coverage reporting.
-- `npm run test:mutants` — runs the mutation tests.
 
 ### Lint it
 
